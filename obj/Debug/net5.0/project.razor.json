@@ -12,6 +12,168 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 739573801,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Questions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Questions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Questions"
+        }
+      },
+      {
+        "HashCode": 572148336,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Questions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.Questions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Questions",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1820259869,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Routed"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed"
+        }
+      },
+      {
+        "HashCode": 709046060,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.Routed"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1832417408,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AdminLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.AdminLayout"
+        }
+      },
+      {
+        "HashCode": 2013367446,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.AdminLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.AdminLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 928951203,
+        "Kind": "Components.ChildContent",
+        "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout.Body",
+        "AssemblyName": "DotNetTeacherBot",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "AdminLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.AdminLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 529689006,
+        "Kind": "Components.ChildContent",
+        "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout.Body",
+        "AssemblyName": "DotNetTeacherBot",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "DotNetTeacherBot.Pages.Admin.AdminLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.AdminLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 2085601310,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
@@ -15617,6 +15779,32 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "DotNetTeacherBot",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\AdminLayout.razor",
+      "TargetPath": "Pages\\Admin\\AdminLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Index.cshtml",
+      "TargetPath": "Pages\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\_Imports.razor",
+      "TargetPath": "Pages\\Admin\\_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Questions.razor",
+      "TargetPath": "Pages\\Admin\\Questions.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Routed.razor",
+      "TargetPath": "Pages\\Admin\\Routed.razor",
+      "FileKind": "component"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

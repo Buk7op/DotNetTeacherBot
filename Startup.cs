@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DotNetTeacherBot.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -28,12 +29,18 @@ namespace DotNetTeacherBot
         
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("QuestionsConn")));
+            services.AddScoped<IQuestionRepo,QuestionRepo>();
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotNetTeacherBot", Version = "v1" });
             });
+            
         }
 
         
@@ -45,15 +52,19 @@ namespace DotNetTeacherBot
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DotNetTeacherBot v1"));
             }
-            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
             app.UseRouting();
+            
 
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
+                endpoints.MapBlazorHub();
+                endpoints.MapFallbackToPage("/admin/{*cathall}","/Admin/Index");
             });
             SeedData.EnsurePopulated(app);
         }

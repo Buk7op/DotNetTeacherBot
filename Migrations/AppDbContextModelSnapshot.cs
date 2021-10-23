@@ -32,6 +32,9 @@ namespace DotNetTeacherBot.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Published")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ShortQuestion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -39,29 +42,6 @@ namespace DotNetTeacherBot.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Questions");
-                });
-
-            modelBuilder.Entity("DotNetTeacherBot.Models.SuggestedQuestion", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ShortQuestion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("SuggestedQuestions");
                 });
 #pragma warning restore 612, 618
         }

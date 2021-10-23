@@ -10,5 +10,6 @@ namespace DotNetTeacherBot.Models
         public string Description { get; set; }
         [Required]
         public string Answer { get; set; }
+        public bool Published { get; set; } = false;
     }
 }

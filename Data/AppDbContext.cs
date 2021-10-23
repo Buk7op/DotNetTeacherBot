@@ -11,6 +11,5 @@ namespace DotNetTeacherBot.Data
         }
 
         public DbSet<Question> Questions {get; set;}
-        public DbSet<SuggestedQuestion> SuggestedQuestions {get; set;}
     }
 }
