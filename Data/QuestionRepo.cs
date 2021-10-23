@@ -14,6 +14,10 @@ namespace DotNetTeacherBot.Data
             _context = context;
         }
 
+        public IQueryable<Question> UnpublishedQuestions => _context.Questions.Where(q => q.Published == false);
+
+        public IQueryable<Question> PublishedQuestions => _context.Questions.Where(q => q.Published == true);
+
         public void CreateQuestion(Question q)
         {
             if(q == null)
@@ -36,19 +40,12 @@ namespace DotNetTeacherBot.Data
             _context.SaveChanges();
         }
 
-        public IEnumerable<Question> PublishedQuestions()
-        {
-            return _context.Questions.Where(q => q.Published == true).ToList();
-        }
-
+        
         public void SaveQuestions(Question q)
         {
             _context.SaveChanges();
         }
 
-        public IEnumerable<Question> UnpublishedQuestions()
-        {
-            return _context.Questions.Where(q => q.Published == false).ToList();
-        }
+        
     }
 }

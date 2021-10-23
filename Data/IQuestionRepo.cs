@@ -8,8 +8,9 @@ namespace DotNetTeacherBot.Data
 {
     public interface IQuestionRepo
     {
-        IEnumerable<Question> UnpublishedQuestions();
-        IEnumerable<Question> PublishedQuestions();
+        IQueryable<Question> UnpublishedQuestions {get;}
+        IQueryable<Question> PublishedQuestions {get;}
+    
         void SaveQuestions(Question q);
         void CreateQuestion(Question q);
         void DeleteQuestion(Question q);

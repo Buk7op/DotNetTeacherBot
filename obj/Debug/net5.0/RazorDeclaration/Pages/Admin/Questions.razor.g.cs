@@ -98,13 +98,37 @@ using DotNetTeacherBot;
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
-    public partial class Questions : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Questions : OwningComponentBase<IQuestionRepo>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 50 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Questions.razor"
+       
+    public IQuestionRepo Repository => Service;
+    public IEnumerable<Question> QuestionData { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+    public async Task UpdateData()
+    {
+        QuestionData = await Repository.UnpublishedQuestions.ToListAsync();
+    }
+    public async Task DeleteProduct(Question q)
+    {
+        Repository.DeleteQuestion(q);
+        await UpdateData();
+    }
+    public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
+    public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

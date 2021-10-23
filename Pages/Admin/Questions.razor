@@ -1,3 +1,68 @@
 @page "/admin/questions"
 @page "/admin" 
-<h4>This is Questions component</h4>
+@inherits OwningComponentBase<IQuestionRepo>
+    <table class="table table-sm table-striped table-bordered">
+        
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Question
+                </th>
+                <th>
+                    Answer
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(QuestionData?.Count() > 0)
+            {
+                @foreach(Question q in QuestionData)
+                {
+            <tr>
+                <td>@q.ID</td>
+                <td>@q.ShortQuestion</td>
+                <td>@q.Description</td>
+                <td>@q.Answer</td>
+                <td>
+                    <NavLink class="btn btn-info btn-sm" href="@GetDetailsUrl(q.ID)">Details</NavLink>
+                    <NavLink class="btn btn-warning btn-sm" href="@GetEditUrl(q.ID)">Edit</NavLink>
+                    <button class="btn btn-danger btn-sm" @onclick="@(e => DeleteProduct(q))">Delete</button>
+                </td>
+            </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                <td colspan="5" class="text-center">No Products</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <NavLink class="btn btn-primary" href="admin/products/create">Create</NavLink>
+
+@code {
+    public IQuestionRepo Repository => Service;
+    public IEnumerable<Question> QuestionData { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+    public async Task UpdateData()
+    {
+        QuestionData = await Repository.UnpublishedQuestions.ToListAsync();
+    }
+    public async Task DeleteProduct(Question q)
+    {
+        Repository.DeleteQuestion(q);
+        await UpdateData();
+    }
+    public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
+    public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
+}

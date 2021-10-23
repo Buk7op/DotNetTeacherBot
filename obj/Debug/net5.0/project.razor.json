@@ -12,72 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 739573801,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Questions",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Questions"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Questions"
-        }
-      },
-      {
-        "HashCode": 572148336,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Questions",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DotNetTeacherBot.Pages.Admin.Questions"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Questions",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1820259869,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Routed"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed"
-        }
-      },
-      {
-        "HashCode": 709046060,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DotNetTeacherBot.Pages.Admin.Routed"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1832417408,
         "Kind": "Components.Component",
         "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout",
@@ -170,6 +104,72 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "DotNetTeacherBot.Pages.Admin.AdminLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1820259869,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Routed"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed"
+        }
+      },
+      {
+        "HashCode": 709046060,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.Routed"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 739573801,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Questions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Questions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Questions"
+        }
+      },
+      {
+        "HashCode": 572148336,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Questions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.Questions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Questions",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
