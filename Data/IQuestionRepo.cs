@@ -10,6 +10,8 @@ namespace DotNetTeacherBot.Data
     {
         IQueryable<Question> UnpublishedQuestions {get;}
         IQueryable<Question> PublishedQuestions {get;}
+
+        IQueryable<Question> Questions {get;}
     
         void SaveQuestions(Question q);
         void CreateQuestion(Question q);

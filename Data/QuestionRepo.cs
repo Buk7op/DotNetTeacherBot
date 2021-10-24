@@ -18,6 +18,8 @@ namespace DotNetTeacherBot.Data
 
         public IQueryable<Question> PublishedQuestions => _context.Questions.Where(q => q.Published == true);
 
+        public IQueryable<Question> Questions => _context.Questions;
+
         public void CreateQuestion(Question q)
         {
             if(q == null)

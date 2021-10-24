@@ -30,6 +30,7 @@
                 <td>@q.Description</td>
                 <td>@q.Answer</td>
                 <td>
+                    <NavLink class="btn btn-info btn-sm" href="@GetPublishUrl(q.ID)">Unpublish</NavLink>
                     <NavLink class="btn btn-warning btn-sm" href="@GetEditUrl(q.ID)">Edit</NavLink>
                     <button class="btn btn-danger btn-sm" @onclick="@(e => DeleteQuestion(q))">Delete</button>
                 </td>

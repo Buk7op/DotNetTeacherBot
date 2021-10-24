@@ -1,0 +1,64 @@
+@page "/admin/questions/edit/{id:long}"
+@page "/admin/questions/create"
+@inherits OwningComponentBase<IQuestionRepo>
+    <style>
+        div.validation-message { color: rgb(220,53,69); font-weight:500}
+    </style>
+    <h3 class="bg-@ThemeColor text-white text-center p-1">@TitleText a Question</h3>
+    <EditForm Model="Question" OnValidSubmit="SaveProduct">
+        <DataAnnotationsValidator />
+        @if (Question.ID != 0)
+        {
+            <div class="form-group">
+                <label>ID</label>
+                <input class="form-control" disabled value="@Question.ID" />
+            </div>
+        }
+        <div class="form-group">
+            <label>Question</label>
+            <ValidationMessage For="@(() => Question.ShortQuestion)" />
+            <InputText class="form-control" @bind-Value="Question.ShortQuestion" />
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <ValidationMessage For="@(() => Question.Description)" />
+            <InputTextArea  class="form-control" @bind-Value="Question.Description" />
+        </div>
+        <div class="form-group">
+            <label>Answer</label>
+            <ValidationMessage For="@(() => Question.Answer)" />
+            <InputTextArea class="form-control" @bind-Value="Question.Answer" />
+        </div>
+        <button type="submit" class="btn btn-@ThemeColor">Save</button>
+        <NavLink class="btn btn-secondary" href="/admin">Cancel</NavLink>
+    </EditForm>
+@code
+{
+    public IQuestionRepo Repository => Service;
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+    [Parameter]
+    public long Id { get; set; } = 0;
+    public Question Question { get; set; } = new Question();
+    protected override void OnParametersSet()
+    {
+        if(Id != 0)
+        {
+            Question = Repository.Questions.FirstOrDefault(q => q.ID == Id);
+        }
+    }
+    public void SaveProduct()
+    {
+        if (Id == 0)
+        {
+            Repository.CreateQuestion(Question);
+        }
+        else
+        {
+            Repository.SaveQuestions(Question);
+        }
+        NavManager.NavigateTo("/admin");
+    }
+    public string ThemeColor => Id == 0 ? "primary" : "warning";
+    public string TitleText => Id == 0 ? "Create" : "Edit";
+}

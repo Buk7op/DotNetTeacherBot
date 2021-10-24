@@ -96,6 +96,13 @@ using DotNetTeacherBot;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Publish.razor"
+using Microsoft.AspNetCore.Mvc;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions/publish/{id:long}")]
     public partial class Publish : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,22 +112,25 @@ using DotNetTeacherBot;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Publish.razor"
+#line 16 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Publish.razor"
  
     [Inject]
     public IQuestionRepo Repository { get; set; }
     [Parameter]
     public long Id { get; set; }
-    public Question UnpublishedQuestion { get; set; }
+    public Question Question { get; set; }
+    public string State => Question.Published == true ? "Unpublish" : "Publish";
+    [Inject]
+    public NavigationManager NavManager { get; set; }
     protected override void OnParametersSet()
     {
-        UnpublishedQuestion = Repository.UnpublishedQuestions.FirstOrDefault(p => p.ID == Id);
+        Question = Repository.Questions.FirstOrDefault(p => p.ID == Id);
     }
-    public string EditUrl => $"/admin/questions/edit/{UnpublishedQuestion.ID}";
-    public Question PublishQuestion()
+    public string EditUrl => $"/admin/questions/edit/{Question.ID}";
+    public void PublishQuestion()
     {
-        Repository.ChangePublish(UnpublishedQuestion);
-        return UnpublishedQuestion;
+        Repository.ChangePublish(Question);
+        NavManager.NavigateTo("/admin");
     }
 
 #line default

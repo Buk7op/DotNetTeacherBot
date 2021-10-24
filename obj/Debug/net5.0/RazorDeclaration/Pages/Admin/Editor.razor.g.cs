@@ -96,8 +96,9 @@ using DotNetTeacherBot;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions/published")]
-    public partial class PublishedQuestions : OwningComponentBase<IQuestionRepo>
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions/edit/{id:long}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions/create")]
+    public partial class Editor : OwningComponentBase<IQuestionRepo>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,25 +106,35 @@ using DotNetTeacherBot;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\PublishedQuestions.razor"
-       
+#line 36 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Editor.razor"
+ 
     public IQuestionRepo Repository => Service;
-    public IEnumerable<Question> QuestionData { get; set; }
-    protected async override Task OnInitializedAsync()
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+    [Parameter]
+    public long Id { get; set; } = 0;
+    public Question Question { get; set; } = new Question();
+    protected override void OnParametersSet()
     {
-        await UpdateData();
+        if(Id != 0)
+        {
+            Question = Repository.Questions.FirstOrDefault(q => q.ID == Id);
+        }
     }
-    public async Task UpdateData()
+    public void SaveProduct()
     {
-        QuestionData = await Repository.PublishedQuestions.ToListAsync();
+        if (Id == 0)
+        {
+            Repository.CreateQuestion(Question);
+        }
+        else
+        {
+            Repository.SaveQuestions(Question);
+        }
+        NavManager.NavigateTo("/admin");
     }
-    public async Task DeleteQuestion(Question q)
-    {
-        Repository.DeleteQuestion(q);
-        await UpdateData();
-    }
-    public string GetPublishUrl(long id) => $"/admin/questions/publish/{id}";
-    public string GetEditUrl(long id) => $"/admin/questions/edit/{id}";
+    public string ThemeColor => Id == 0 ? "primary" : "warning";
+    public string TitleText => Id == 0 ? "Create" : "Edit";
 
 #line default
 #line hidden
