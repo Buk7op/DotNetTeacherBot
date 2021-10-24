@@ -88,3 +88,4 @@ C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\A
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\Editor.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\Telegram.Bot.dll

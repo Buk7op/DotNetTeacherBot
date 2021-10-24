@@ -26,7 +26,6 @@ namespace DotNetTeacherBot
 
         public IConfiguration Configuration { get; }
 
-        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
@@ -34,6 +33,7 @@ namespace DotNetTeacherBot
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("QuestionsConn")));
             services.AddScoped<IQuestionRepo,QuestionRepo>();
+            services.AddSingleton<IBotTeacher,BotTeacher>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>

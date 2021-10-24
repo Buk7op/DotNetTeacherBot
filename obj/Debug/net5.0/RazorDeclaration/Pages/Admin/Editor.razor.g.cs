@@ -13,84 +13,84 @@ namespace DotNetTeacherBot.Pages.Admin
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 1 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 2 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 3 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 4 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 5 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 6 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 7 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 8 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 9 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using Microsoft.EntityFrameworkCore;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 10 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using DotNetTeacherBot.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 11 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using DotNetTeacherBot.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
+#line 12 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\_Imports.razor"
 using DotNetTeacherBot;
 
 #line default
@@ -106,7 +106,7 @@ using DotNetTeacherBot;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Editor.razor"
+#line 36 "c:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Editor.razor"
  
     public IQuestionRepo Repository => Service;
     [Inject]

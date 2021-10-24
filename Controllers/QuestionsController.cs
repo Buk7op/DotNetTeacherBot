@@ -12,11 +12,13 @@ namespace DotNetTeacherBot.Controllers
     {
         private readonly IQuestionRepo _repo;
         private readonly IMapper _mapper;
+        private readonly IBotTeacher _bot;
 
-        public QuestionsController(IQuestionRepo repo, IMapper mapper)
+        public QuestionsController(IQuestionRepo repo, IMapper mapper, IBotTeacher bot)
         {
             _repo = repo;
             _mapper = mapper;
+            _bot = bot;
         }
 
         [HttpPost]
@@ -41,6 +43,12 @@ namespace DotNetTeacherBot.Controllers
                 return NotFound();
             }
             
+        }
+        [HttpGet(Name = "Bot")]
+        public ActionResult Bot()
+        {
+            // TODO
+            return Ok();
         }
     }
 }
