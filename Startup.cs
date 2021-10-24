@@ -34,8 +34,8 @@ namespace DotNetTeacherBot
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("QuestionsConn")));
             services.AddScoped<IQuestionRepo,QuestionRepo>();
-            
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotNetTeacherBot", Version = "v1" });

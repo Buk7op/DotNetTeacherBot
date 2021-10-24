@@ -12,6 +12,59 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 269193858,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Editor"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int64",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor"
+        }
+      },
+      {
+        "HashCode": -284345590,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.Editor"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int64",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1832417408,
         "Kind": "Components.Component",
         "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout",
@@ -108,92 +161,6 @@
         }
       },
       {
-        "HashCode": 1820259869,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Routed"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed"
-        }
-      },
-      {
-        "HashCode": 709046060,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DotNetTeacherBot.Pages.Admin.Routed"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1642791326,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Publish",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Publish"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.Int64",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Publish"
-        }
-      },
-      {
-        "HashCode": 52307526,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Publish",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DotNetTeacherBot.Pages.Admin.Publish"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.Int64",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Publish",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1747292445,
         "Kind": "Components.Component",
         "Name": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
@@ -260,14 +227,14 @@
         }
       },
       {
-        "HashCode": 269193858,
+        "HashCode": -1642791326,
         "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
+        "Name": "DotNetTeacherBot.Pages.Admin.Publish",
         "AssemblyName": "DotNetTeacherBot",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Editor"
+            "TagName": "Publish"
           }
         ],
         "BoundAttributes": [
@@ -282,18 +249,18 @@
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor"
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Publish"
         }
       },
       {
-        "HashCode": -284345590,
+        "HashCode": 52307526,
         "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
+        "Name": "DotNetTeacherBot.Pages.Admin.Publish",
         "AssemblyName": "DotNetTeacherBot",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DotNetTeacherBot.Pages.Admin.Editor"
+            "TagName": "DotNetTeacherBot.Pages.Admin.Publish"
           }
         ],
         "BoundAttributes": [
@@ -308,7 +275,40 @@
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Publish",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1820259869,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Routed"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed"
+        }
+      },
+      {
+        "HashCode": 709046060,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.Routed",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.Routed"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
