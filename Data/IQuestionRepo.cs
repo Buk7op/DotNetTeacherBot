@@ -13,9 +13,11 @@ namespace DotNetTeacherBot.Data
 
         IQueryable<Question> Questions {get;}
     
-        void SaveQuestions(Question q);
+        void SaveQuestions();
         void CreateQuestion(Question q);
         void DeleteQuestion(Question q);
         void ChangePublish(Question q);
+
+        Question GetQuestionById(int id);
     }
 }

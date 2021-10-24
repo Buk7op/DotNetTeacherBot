@@ -12,59 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 269193858,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Editor"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.Int64",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor"
-        }
-      },
-      {
-        "HashCode": -284345590,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DotNetTeacherBot.Pages.Admin.Editor"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.Int64",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1832417408,
         "Kind": "Components.Component",
         "Name": "DotNetTeacherBot.Pages.Admin.AdminLayout",
@@ -161,68 +108,55 @@
         }
       },
       {
-        "HashCode": -1747292445,
+        "HashCode": 269193858,
         "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
+        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
         "AssemblyName": "DotNetTeacherBot",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "PublishedQuestions"
+            "TagName": "Editor"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int64",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.PublishedQuestions"
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor"
         }
       },
       {
-        "HashCode": 1556477699,
+        "HashCode": -284345590,
         "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
+        "Name": "DotNetTeacherBot.Pages.Admin.Editor",
         "AssemblyName": "DotNetTeacherBot",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DotNetTeacherBot.Pages.Admin.PublishedQuestions"
+            "TagName": "DotNetTeacherBot.Pages.Admin.Editor"
           }
         ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -319805356,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
+        "BoundAttributes": [
           {
-            "TagName": "UnpublishedQuestions"
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int64",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions"
-        }
-      },
-      {
-        "HashCode": -610878163,
-        "Kind": "Components.Component",
-        "Name": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions",
-        "AssemblyName": "DotNetTeacherBot",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Editor",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -280,6 +214,39 @@
         }
       },
       {
+        "HashCode": -1747292445,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PublishedQuestions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.PublishedQuestions"
+        }
+      },
+      {
+        "HashCode": 1556477699,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.PublishedQuestions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.PublishedQuestions",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1820259869,
         "Kind": "Components.Component",
         "Name": "DotNetTeacherBot.Pages.Admin.Routed",
@@ -309,6 +276,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "DotNetTeacherBot.Pages.Admin.Routed",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -319805356,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "UnpublishedQuestions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions"
+        }
+      },
+      {
+        "HashCode": -610878163,
+        "Kind": "Components.Component",
+        "Name": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions",
+        "AssemblyName": "DotNetTeacherBot",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DotNetTeacherBot.Pages.Admin.UnpublishedQuestions",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

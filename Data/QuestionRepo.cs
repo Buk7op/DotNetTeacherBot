@@ -43,11 +43,14 @@ namespace DotNetTeacherBot.Data
         }
 
         
-        public void SaveQuestions(Question q)
+        public void SaveQuestions()
         {
             _context.SaveChanges();
         }
 
-        
+        public Question GetQuestionById(int id)
+        {
+            return _context.Questions.FirstOrDefault(q => q.ID == id);
+        }
     }
 }

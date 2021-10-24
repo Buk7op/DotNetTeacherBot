@@ -5,7 +5,7 @@
         div.validation-message { color: rgb(220,53,69); font-weight:500}
     </style>
     <h3 class="bg-@ThemeColor text-white text-center p-1">@TitleText a Question</h3>
-    <EditForm Model="Question" OnValidSubmit="SaveProduct">
+    <EditForm Model="Question" OnValidSubmit="SaveQuestion">
         <DataAnnotationsValidator />
         @if (Question.ID != 0)
         {
@@ -47,7 +47,7 @@
             Question = Repository.Questions.FirstOrDefault(q => q.ID == Id);
         }
     }
-    public void SaveProduct()
+    public void SaveQuestion()
     {
         if (Id == 0)
         {
@@ -55,7 +55,7 @@
         }
         else
         {
-            Repository.SaveQuestions(Question);
+            Repository.SaveQuestions();
         }
         NavManager.NavigateTo("/admin");
     }
