@@ -60,7 +60,6 @@ C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.pdb
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.genruntimeconfig.cache
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.RazorComponent.input.cache
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\AdminLayout.razor.g.cs
-C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\Questions.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\Routed.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\_Imports.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.RazorComponent.output.cache
@@ -71,7 +70,6 @@ C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.RazorCo
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\DotNetTeacherBot.Views.dll
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\DotNetTeacherBot.Views.pdb
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\AdminLayout.razor.g.cs
-C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\Questions.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\Routed.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\_Imports.razor.g.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\Index.cshtml.g.cs
@@ -80,3 +78,9 @@ C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.RazorAs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.RazorTargetAssemblyInfo.cs
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.Views.pdb
 C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\DotNetTeacherBot.csproj.CopyComplete
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\Publish.razor.g.cs
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\Publish.razor.g.cs
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\UnpublishedQuestions.razor.g.cs
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\UnpublishedQuestions.razor.g.cs
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\RazorDeclaration\Pages\Admin\PublishedQuestions.razor.g.cs
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\PublishedQuestions.razor.g.cs

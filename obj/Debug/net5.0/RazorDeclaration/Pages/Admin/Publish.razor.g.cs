@@ -96,9 +96,8 @@ using DotNetTeacherBot;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
-    public partial class Questions : OwningComponentBase<IQuestionRepo>
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/questions/publish/{id:long}")]
+    public partial class Publish : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -106,25 +105,23 @@ using DotNetTeacherBot;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Questions.razor"
-       
-    public IQuestionRepo Repository => Service;
-    public IEnumerable<Question> QuestionData { get; set; }
-    protected async override Task OnInitializedAsync()
+#line 15 "C:\Users\Viktor\repos\DotNetTeacherBot\Pages\Admin\Publish.razor"
+ 
+    [Inject]
+    public IQuestionRepo Repository { get; set; }
+    [Parameter]
+    public long Id { get; set; }
+    public Question UnpublishedQuestion { get; set; }
+    protected override void OnParametersSet()
     {
-        await UpdateData();
+        UnpublishedQuestion = Repository.UnpublishedQuestions.FirstOrDefault(p => p.ID == Id);
     }
-    public async Task UpdateData()
+    public string EditUrl => $"/admin/questions/edit/{UnpublishedQuestion.ID}";
+    public Question PublishQuestion()
     {
-        QuestionData = await Repository.UnpublishedQuestions.ToListAsync();
+        Repository.ChangePublish(UnpublishedQuestion);
+        return UnpublishedQuestion;
     }
-    public async Task DeleteProduct(Question q)
-    {
-        Repository.DeleteQuestion(q);
-        await UpdateData();
-    }
-    public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
-    public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
 
 #line default
 #line hidden

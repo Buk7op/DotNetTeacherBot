@@ -14,6 +14,6 @@ namespace DotNetTeacherBot.Data
         void SaveQuestions(Question q);
         void CreateQuestion(Question q);
         void DeleteQuestion(Question q);
-        void Publish(Question q);
+        void ChangePublish(Question q);
     }
 }

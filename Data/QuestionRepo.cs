@@ -34,9 +34,9 @@ namespace DotNetTeacherBot.Data
             _context.SaveChanges();
         }
 
-        public void Publish(Question q)
+        public void ChangePublish(Question q)
         {
-            q.Published = true;
+            q.Published = !q.Published;
             _context.SaveChanges();
         }
 
