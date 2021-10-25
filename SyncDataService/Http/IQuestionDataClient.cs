@@ -6,6 +6,7 @@ namespace DotNetTeacherBot.SyncDataService.Http
 {
     public interface IQuestionDataClient
     {
-        Task<IEnumerable<QuestionCreateDto>> GetQuestionsFromSite();
+        Task<IEnumerable<QuestionReadDto>> GetQuestionsFromSite();
+        Task<QuestionReadDto> GetQuestionById(int id);
     }
 }

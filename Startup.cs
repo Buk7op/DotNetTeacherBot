@@ -47,7 +47,7 @@ namespace DotNetTeacherBot
         }
 
         
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IQuestionDataClient client)
         {
             if (env.IsDevelopment())
             {
@@ -69,7 +69,8 @@ namespace DotNetTeacherBot
                 endpoints.MapFallbackToPage("/admin/{*cathall}","/Admin/Index");
             });
             SeedData.EnsurePopulated(app);
-            BotTeacher.ConfigureBot(Configuration);
+            BotTeacher bot = new BotTeacher(Configuration, client);
+            
         }
     }
 }

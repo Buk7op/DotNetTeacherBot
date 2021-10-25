@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using DotNetTeacherBot.DTOs;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace DotNetTeacherBot.SyncDataService.Http
 {
@@ -18,19 +19,21 @@ namespace DotNetTeacherBot.SyncDataService.Http
             _httpClient = httpClient;
             _config = config;
         }
-        public async Task<IEnumerable<QuestionCreateDto>> GetQuestionsFromSite()
+
+        public async Task<QuestionReadDto> GetQuestionById(int id)
+        {
+            var response = await _httpClient.GetAsync($@"{_config["GetAllQuestions"]}/{id}");
+            var responsebody = response.Content.ReadAsStringAsync();
+            QuestionReadDto result = JsonConvert.DeserializeObject<QuestionReadDto>(responsebody.Result);
+            return result;
+        }
+
+        public async Task<IEnumerable<QuestionReadDto>> GetQuestionsFromSite()
         {
             var response = await _httpClient.GetAsync($"{_config["GetAllQuestions"]}");
-            if(response.IsSuccessStatusCode)
-            {
-                System.Console.WriteLine("--> Sync POST to Site was OK!");
-            }
-            else
-            {
-                System.Console.WriteLine("--> Sync POST to Site was NOT OK!");
-            }
-            
-            return new List<QuestionCreateDto>();
+            var responsebody = response.Content.ReadAsStringAsync();
+            IEnumerable<QuestionReadDto> result = JsonConvert.DeserializeObject<IEnumerable<QuestionReadDto>>(responsebody.Result);
+            return result;
         }
 
         

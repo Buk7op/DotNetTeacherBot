@@ -10,7 +10,7 @@ namespace DotNetTeacherBot.Profiles
         {
             // Source -> target
             CreateMap<QuestionCreateDto, Question>();
-            
+            CreateMap<Question,QuestionReadDto>();
         }
     }
 }

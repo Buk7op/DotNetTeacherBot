@@ -29,7 +29,7 @@ namespace DotNetTeacherBot.Controllers
             var questionItem = _repo.PublishedQuestions;
             if(questionItem != null)
             {
-                return Ok(_mapper.Map<IEnumerable<Question>>(questionItem));
+                return Ok(questionItem);
             }
             else
             {
