@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using AutoMapper;
 using DotNetTeacherBot.Data;
 using DotNetTeacherBot.DTOs;
@@ -6,21 +7,36 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotNetTeacherBot.Controllers
 {
-    [Route("api/questions")]
+    [Route("api/[controller]")]
     [ApiController]
     public class QuestionsController : ControllerBase
     {
         private readonly IQuestionRepo _repo;
         private readonly IMapper _mapper;
-        private readonly IBotTeacher _bot;
 
-        public QuestionsController(IQuestionRepo repo, IMapper mapper, IBotTeacher bot)
+
+        public QuestionsController(IQuestionRepo repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;
-            _bot = bot;
         }
 
+
+        [HttpGet]
+        
+        public ActionResult<Question> GetAllPublishedQuestions()
+        {
+            var questionItem = _repo.PublishedQuestions;
+            if(questionItem != null)
+            {
+                return Ok(_mapper.Map<IEnumerable<Question>>(questionItem));
+            }
+            else
+            {
+                return NotFound();
+            }
+            
+        }
         [HttpPost]
         public ActionResult<Question> CreateQuestion(QuestionCreateDto questionCreateDto)
         {
@@ -44,11 +60,6 @@ namespace DotNetTeacherBot.Controllers
             }
             
         }
-        [HttpGet(Name = "Bot")]
-        public ActionResult Bot()
-        {
-            // TODO
-            return Ok();
-        }
+        
     }
 }

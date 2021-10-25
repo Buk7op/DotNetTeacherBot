@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using DotNetTeacherBot.SyncDataService.Http;
 
 namespace DotNetTeacherBot
 {
@@ -26,6 +27,8 @@ namespace DotNetTeacherBot
 
         public IConfiguration Configuration { get; }
 
+        
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
@@ -33,7 +36,7 @@ namespace DotNetTeacherBot
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("QuestionsConn")));
             services.AddScoped<IQuestionRepo,QuestionRepo>();
-            services.AddSingleton<IBotTeacher,BotTeacher>();
+            services.AddHttpClient<IQuestionDataClient,HttpQuestionDataClient>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
@@ -56,7 +59,7 @@ namespace DotNetTeacherBot
 
             app.UseRouting();
             
-
+            
 
             app.UseEndpoints(endpoints =>
             {
@@ -66,6 +69,7 @@ namespace DotNetTeacherBot
                 endpoints.MapFallbackToPage("/admin/{*cathall}","/Admin/Index");
             });
             SeedData.EnsurePopulated(app);
+            BotTeacher.ConfigureBot(Configuration);
         }
     }
 }
