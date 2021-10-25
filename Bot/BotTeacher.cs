@@ -8,6 +8,8 @@ using Telegram.Bot.Args;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 using DotNetTeacherBot.DTOs;
+using System.Linq;
+
 namespace DotNetTeacherBot
 {
     public class BotTeacher
@@ -17,6 +19,8 @@ namespace DotNetTeacherBot
         private readonly TelegramBotClient _client;
         private readonly IQuestionDataClient _dataClient;
         Dictionary<int,int> ListToId = new Dictionary<int, int>();
+
+        
         public BotTeacher(IConfiguration config, IQuestionDataClient dataClient)
         {
             _botToken = config["BotToken"];
@@ -29,11 +33,15 @@ namespace DotNetTeacherBot
         
         private async void OnMessageHandler(object sender, MessageEventArgs e)
         {
+            
             var msg = e.Message;
             if (msg.Text != null)
             {
                 switch(msg.Text)
                 {
+                    case "/start":
+                        InitialMessage(e);
+                        break;
                     case "Начать обучение":
                         StartLearning(e);
                         break;
@@ -49,14 +57,19 @@ namespace DotNetTeacherBot
                                 text: "Введите номер вопроса",
                                 ParseMode.Default, 
                                 replyMarkup: new ForceReplyMarkup { Selective = true }); 
-                        break;          
+                        break;         
+                }
+                if(msg.Text.Contains("Показать ответ на"))
+                {
+                    int id = int.Parse(String.Concat(msg.Text.Where(Char.IsDigit)));
+                    ShowQuestionById(e,id,true);
                 }
                 if (msg.ReplyToMessage != null && msg.ReplyToMessage.Text.Contains("Введите номер вопроса"))
                 {
                     int id = default;
                     if(int.TryParse(msg.Text,out id) && ListToId.ContainsKey(id))
                     {
-                        ShowQuestionById(e,id);
+                        ShowQuestionById(e,id,false);
                     }
                     else
                     {
@@ -71,7 +84,7 @@ namespace DotNetTeacherBot
                                 replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
                 }
-                //InitialMessage(e);
+                
             }
         }
         private async  void InitialMessage(MessageEventArgs e)
@@ -131,25 +144,54 @@ namespace DotNetTeacherBot
                 replyMarkup: keyboard 
             );
         }
-    private async void ShowQuestionById(MessageEventArgs e, int id)
-        {  
-            var question = _dataClient.GetQuestionById(ListToId[id]);
-            StringBuilder sb = new StringBuilder();
-            sb.Append(question.Result.ShortQuestion + Environment.NewLine + question.Result.Description);
-            var keyboard = new ReplyKeyboardMarkup
-            {
-                Keyboard = new List<List<KeyboardButton>>
+        private async void ShowQuestionById(MessageEventArgs e, int id,bool showAnswer)
+            {  
+                QuestionReadDto currentQuestion = new QuestionReadDto();
+                currentQuestion = _dataClient.GetQuestionById(ListToId[id]).Result;
+                StringBuilder sb = new StringBuilder();
+                sb.Append(currentQuestion.ShortQuestion + Environment.NewLine + currentQuestion.Description);
+                var keyboard = new ReplyKeyboardMarkup
                 {
-                    new List<KeyboardButton> {new KeyboardButton {Text = "Случайный вопрос"}, new KeyboardButton {Text = "Показать все вопросы"}},
-                    new List<KeyboardButton> {new KeyboardButton {Text = "Показать ответ"}, new KeyboardButton {Text = "Выбрать вопрос"}}
+                    Keyboard = new List<List<KeyboardButton>>
+                    {
+                        new List<KeyboardButton> {new KeyboardButton {Text = "Случайный вопрос"}, new KeyboardButton {Text = "Показать все вопросы"}},
+                        new List<KeyboardButton> {new KeyboardButton {Text = $"Показать ответ на {id} вопрос"}, new KeyboardButton {Text = "Выбрать вопрос"}}
+                    }
+                }; 
+                await _client.SendTextMessageAsync(
+                    chatId: e.Message.Chat.Id,
+                    text: sb.ToString(),
+                    replyMarkup: keyboard 
+                );
+                if(showAnswer)
+                {
+                    keyboard = new ReplyKeyboardMarkup
+                    {
+                        Keyboard = new List<List<KeyboardButton>>
+                        {
+                            new List<KeyboardButton> {new KeyboardButton {Text = "Случайный вопрос"}, new KeyboardButton {Text = "Показать все вопросы"}},
+                            new List<KeyboardButton> {new KeyboardButton {Text = "Следующий вопрос"}, new KeyboardButton {Text = "Выбрать вопрос"}}
+                        }
+                    }; 
+                    await _client.SendTextMessageAsync(
+                    chatId: e.Message.Chat.Id,
+                    text: currentQuestion.Answer,
+                    ParseMode.Default, 
+                    replyMarkup: keyboard
+                    );
                 }
-            }; 
-            await _client.SendTextMessageAsync(
-                chatId: e.Message.Chat.Id,
-                text: sb.ToString(),
-                replyMarkup: keyboard 
-            );
-        }
+                else
+                {
+                    await _client.SendTextMessageAsync(
+                    chatId: e.Message.Chat.Id,
+                    text: $"Показать ответ на вопрос: {id}?",
+                    ParseMode.Default, 
+                    replyMarkup: keyboard
+                );
+                }
+                
+                
+            }
         private async  void AddAnotherQuestion(MessageEventArgs e)
         { 
             await _client.SendTextMessageAsync(
