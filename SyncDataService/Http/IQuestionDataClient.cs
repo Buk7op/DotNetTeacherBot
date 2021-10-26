@@ -8,5 +8,6 @@ namespace DotNetTeacherBot.SyncDataService.Http
     {
         Task<IEnumerable<QuestionReadDto>> GetQuestionsFromSite();
         Task<QuestionReadDto> GetQuestionById(int id);
+        Task AddQuestion(QuestionCreateDto q);
     }
 }

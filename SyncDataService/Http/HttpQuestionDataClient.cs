@@ -20,6 +20,15 @@ namespace DotNetTeacherBot.SyncDataService.Http
             _config = config;
         }
 
+        public async Task AddQuestion(QuestionCreateDto question)
+        {
+            var httpContent = new StringContent(
+                System.Text.Json.JsonSerializer.Serialize(question),
+                Encoding.UTF8,
+                "application/json");
+            var response = await _httpClient.PostAsync($"{_config["PostQuestion"]}", httpContent);
+        }
+
         public async Task<QuestionReadDto> GetQuestionById(int id)
         {
             var response = await _httpClient.GetAsync($@"{_config["GetAllQuestions"]}/{id}");
