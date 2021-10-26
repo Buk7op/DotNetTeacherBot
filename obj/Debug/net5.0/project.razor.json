@@ -15920,9 +15920,19 @@
   "RootNamespace": "DotNetTeacherBot",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\IdentityUsers.cshtml",
+      "TargetPath": "Pages\\Admin\\IdentityUsers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\AdminLayout.razor",
       "TargetPath": "Pages\\Admin\\AdminLayout.razor",
       "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Index.cshtml",

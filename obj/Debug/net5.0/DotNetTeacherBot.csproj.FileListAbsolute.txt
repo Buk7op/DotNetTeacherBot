@@ -89,3 +89,6 @@ C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\Editor
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\Telegram.Bot.dll
+C:\Users\Viktor\repos\DotNetTeacherBot\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Pages\Admin\IdentityUsers.cshtml.g.cs
+C:\Users\Viktor\repos\DotNetTeacherBot\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs

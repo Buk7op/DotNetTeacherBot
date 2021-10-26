@@ -15,6 +15,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using DotNetTeacherBot.SyncDataService.Http;
+using DotNetTeacherBot.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace DotNetTeacherBot
 {
@@ -39,6 +41,8 @@ namespace DotNetTeacherBot
             services.AddHttpClient<IQuestionDataClient,HttpQuestionDataClient>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotNetTeacherBot", Version = "v1" });
@@ -59,18 +63,20 @@ namespace DotNetTeacherBot
 
             app.UseRouting();
             
-            
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/admin/{*cathall}","/Admin/Index");
             });
             SeedData.EnsurePopulated(app);
             BotTeacher bot = new BotTeacher(Configuration, client);
-            
+            IdentitySeedData.EnsurePopulated(app,Configuration);
         }
     }
 }
