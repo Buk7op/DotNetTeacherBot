@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\DotNetTeacherBot.csproj",
+  "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\DotNetTeacherBot.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15920,54 +15920,54 @@
   "RootNamespace": "DotNetTeacherBot",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\IdentityUsers.cshtml",
-      "TargetPath": "Pages\\Admin\\IdentityUsers.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\AdminLayout.razor",
-      "TargetPath": "Pages\\Admin\\AdminLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Views\\Account\\Login.cshtml",
-      "TargetPath": "Views\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Index.cshtml",
-      "TargetPath": "Pages\\Admin\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Editor.razor",
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\Editor.razor",
       "TargetPath": "Pages\\Admin\\Editor.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\_Imports.razor",
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\_Imports.razor",
       "TargetPath": "Pages\\Admin\\_Imports.razor",
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\PublishedQuestions.razor",
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\AdminLayout.razor",
+      "TargetPath": "Pages\\Admin\\AdminLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\PublishedQuestions.razor",
       "TargetPath": "Pages\\Admin\\PublishedQuestions.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\UnpublishedQuestions.razor",
-      "TargetPath": "Pages\\Admin\\UnpublishedQuestions.razor",
-      "FileKind": "component"
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\Index.cshtml",
+      "TargetPath": "Pages\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Publish.razor",
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\Publish.razor",
       "TargetPath": "Pages\\Admin\\Publish.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Viktor\\repos\\DotNetTeacherBot\\Pages\\Admin\\Routed.razor",
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\IdentityUsers.cshtml",
+      "TargetPath": "Pages\\Admin\\IdentityUsers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\Routed.razor",
       "TargetPath": "Pages\\Admin\\Routed.razor",
       "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Pages\\Admin\\UnpublishedQuestions.razor",
+      "TargetPath": "Pages\\Admin\\UnpublishedQuestions.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\Viktor\\LocalRepos\\DotNetTeacherBot\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
